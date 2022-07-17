@@ -20,6 +20,6 @@ func Connect() {
 }
 
 //Helper function to get database
-func getDB() *gorm.DB {
+func GetDB() *gorm.DB {
 	return db
 }
