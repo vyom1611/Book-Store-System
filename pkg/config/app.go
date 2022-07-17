@@ -10,5 +10,16 @@ var(
 
 //Function to connect with MySQL database
 func Connect() {
-	d, err := gorm.Open("mysql", "DATABASE_INFO")
+	data, err := gorm.Open("mysql", "DATABASE_INFO")
+	if err != nil {
+		panic(err)
+	}
+
+	//Transfering the data to db database
+	db = data
+}
+
+//Helper function to get database
+func getDB() *gorm.DB {
+	return db
 }
